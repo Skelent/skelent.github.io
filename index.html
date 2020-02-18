@@ -1,40 +1,47 @@
-<!DOCTYPE html>
-	<head>
-		<link rel='icon' href='https://skelent.github.io/images/favicon.ico?v=2' />
-		<title>Comprehend</title>
-		<style>
-			body { margin: 0; }
-			canvas { display: block; }
-		</style>
-	</head>
-	<body>
-		<script src="js/three.js"></script>
-		<script>
-			var scene = new THREE.Scene();
-			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
-
-			var renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
-
-			var geometry = new THREE.BoxGeometry();
-			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			var cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
-
-			camera.position.z = 5;
-
-			var animate = function () {
-				requestAnimationFrame( animate );
-
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
-				cube.rotation.z += 0.01;
-
-				renderer.render( scene, camera );
-			};
-
-			animate();
-		</script>
-	</body>
+<html>
+  <head>
+    <title>Comprehend</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel='icon' href='https://skelent.github.io/images/favicon.ico?v=2' />
+  </head>
+  <body>
+    <div style="padding-left: 32px; padding-top: 8px;" class="content">
+      <h1>
+        WebCraft
+      </h1>
+      <br/>
+      <h4>
+        Play Game
+      </h4>
+      <hr/>
+      <a href="singleplayer.html">Singleplayer</a>
+      <br/>
+      <a href="multiplayer.html">Multiplayer</a>
+      <br/>
+      <br/>
+      <h4>
+        Controls
+      </h4>
+      <hr/>
+      <p>
+        Click and drag your mouse on the visible portion of the game to look around.
+        Left click on a block to break it, and right click on a block face to place a block next to it (like in Minecraft).
+        Click on a block icon to switch to placing it. Move around the world with WASD.
+        If you can't move, try clicking the visible portion of the game.
+        Clicking on the three vertical bars on the top-left corner of the screen opens a menu which will allow you to load and save worlds.
+      </p>
+      <br/>
+      <br/>
+      <small>
+        Note: I did not completely make this.
+        Full credit for creating the original version of this goes to <a href="https://github.com/Overv">Overv</a> on <a href="https://github.com/">Github</a>.
+        I have simply modified it in order to add many features which make the game better, and more usable.
+        You can find the original project <a href="https://github.com/Overv/WebCraft">here</a>, if you're interested.
+      </small>
+      <br/>
+    </div>
+    <div class="creatorinfo content">&copy; <a href="https://glitch.com/@Pugduddly">Pugduddly</a> (Evan Carlson) 2018</div>
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
 </html>
